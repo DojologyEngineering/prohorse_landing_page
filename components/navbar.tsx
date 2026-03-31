@@ -14,7 +14,7 @@ export function Navbar({ data }: NavbarProps) {
       style={{ backgroundColor: "#0E1A0A" }}
       id="top"
     >
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-2 py-4">
+      <div className="mx-auto flex w-full max-w-[1320px] items-center justify-between px-2 py-4">
         <a className="text-lg font-bold text-[#FFFFFF] flex items-center gap-2" href="#">
           <Image src={logo} alt="Prohorse Logo" width={32} height={32} />
           <div>
