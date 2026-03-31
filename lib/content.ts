@@ -80,14 +80,29 @@ export const content: SiteContent = {
     { question: "Do you do bulk orders?", answer: "Yes, contact support for business or large-volume orders." },
   ],
   footer: {
-    brand: "Prohorse",
-    description: "Fresh groceries with reliable delivery and local sourcing.",
+    brand: "Prohose.",
+    description:
+      "Cambodia's trusted digital grocery platform - connecting local farmers with families for a fresher, healthier life.",
+    navTitle: "NAVIGATE",
+    contactTitle: "CONTACT",
     links: [
       { label: "Home", href: "#" },
-      { label: "About", href: "#" },
-      { label: "Products", href: "#" },
-      { label: "Why us", href: "#" },
-      { label: "FAQ", href: "#" },
+      { label: "About", href: "#story" },
+      { label: "Products", href: "#products" },
+      { label: "Why Us", href: "#features" },
+      { label: "FAQ", href: "#faq" },
     ],
+    socials: [
+      { icon: "facebook", label: "Facebook", href: "#" },
+      { icon: "globe", label: "Website", href: "#" },
+    ],
+    contacts: [
+      { icon: "map-pin", label: "Phnom Penh, Cambodia", href: "#" },
+      { icon: "globe", label: "prohose-official.com", href: "#" },
+      { icon: "facebook", label: "ProhoseOfficial", href: "#" },
+    ],
+    copyright: "© 2026 Prohose Official. All rights reserved.",
+    poweredBy: "Power by Dojology",
+    poweredByHref: "#",
   },
 };
