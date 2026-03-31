@@ -10,16 +10,19 @@ type NavbarProps = {
 export function Navbar({ data }: NavbarProps) {
   return (
     <header
-      className="sticky top-0 z-40 border-b"
+      className="sticky top-0 z-40 border-b border-[#0E1A0A]"
       style={{ backgroundColor: "#0E1A0A" }}
       id="top"
     >
       <div className="mx-auto flex w-full max-w-[1320px] items-center justify-between px-2 py-4">
-        <a className="text-lg font-bold text-[#FFFFFF] flex items-center gap-2" href="#">
+        <a
+          className="text-lg font-bold text-[#FFFFFF] flex items-center gap-2"
+          href="#"
+        >
           <Image src={logo} alt="Prohorse Logo" width={32} height={32} />
           <div>
             {data.brand}
-            <span style={{ color: '#6CC51D' }}>.</span>
+            <span style={{ color: "#6CC51D" }}>.</span>
           </div>
         </a>
         <nav className="hidden items-center gap-6 text-sm md:flex">
@@ -34,7 +37,7 @@ export function Navbar({ data }: NavbarProps) {
           ))}
         </nav>
         <a
-          className="bg-brand-green px-5 py-2 text-sm font-semibold text-white flex items-center gap-3"
+          className="bg-brand-green px-5 py-2 text-sm font-medium text-white flex items-center gap-3"
           href={data.cta.href}
         >
           {/* Shopping bag icon */}
