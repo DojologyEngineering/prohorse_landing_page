@@ -29,7 +29,7 @@ export function Navbar({ data }: NavbarProps) {
           {data.links.map((link) => (
             <a
               key={link.label}
-              className="text-[#FFFFFF] hover:text-brand-black"
+              className="text-[#FFFFFF] hover:text-brand-green"
               href={link.href}
             >
               {link.label}

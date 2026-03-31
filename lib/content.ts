@@ -28,11 +28,11 @@ export const content: SiteContent = {
   story: {
     eyebrow: "OUR STORY",
     title: "Born from a love for local flavors.",
-    description: "Use this block for your production copy once design/content owners finalize messaging.",
+    description: "Prohose Official began in a home kitchen in 2020. Today we connect local Cambodian farmers and SMEs with families — making fresh, quality groceries accessible for everyone.",
     highlights: [
-      { title: "Founded", text: "2020" },
-      { title: "Registered", text: "Kandal, Cambodia" },
-      { title: "Scale", text: "Regional operations" },
+      { title: "2020", text: "Founded" },
+      { title: "2021", text: "Registered SME" },
+      { title: "2022", text: "Medium Enterprise" },
     ],
   },
   products: {
