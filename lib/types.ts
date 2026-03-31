@@ -78,7 +78,22 @@ export type FaqItem = {
 export type FooterContent = {
   brand: string;
   description: string;
+  navTitle: string;
+  contactTitle: string;
   links: LinkItem[];
+  socials: Array<{
+    icon: "facebook" | "globe";
+    label: string;
+    href: string;
+  }>;
+  contacts: Array<{
+    icon: "map-pin" | "globe" | "facebook";
+    label: string;
+    href: string;
+  }>;
+  copyright: string;
+  poweredBy: string;
+  poweredByHref: string;
 };
 
 export type SiteContent = {
