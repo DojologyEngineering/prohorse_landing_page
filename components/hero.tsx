@@ -19,7 +19,7 @@ export function Hero({ data }: HeroProps) {
         backgroundPosition: "bottom",
       }}
     >
-      <div className="mx-auto w-full max-w-[1320px] px-6 py-20 flex items-center justify-between gap-12">
+      <div className="mx-auto w-full px-6 md:px-14 flex items-center justify-between gap-12">
         {/* Left: Text Content */}
         <div className="flex-1 max-w-xl">
           {/* Eyebrow badge */}
