@@ -9,7 +9,7 @@ type StoryProps = {
 export function Story({ data }: StoryProps) {
   return (
     <section className="bg-white flex items-center" id="story">
-      <div className="mx-auto w-full max-w-[1320px] px-6 py-24 flex flex-col md:flex-row gap-16 lg:gap-24 w-full items-center">
+      <div className="mx-auto w-full px-6 md:px-14 flex flex-col md:flex-row gap-16 lg:gap-24 w-full items-center">
         {/* Left: Image */}
         <div className="flex-1 w-full relative">
            <div className="w-full relative aspect-[1.1] md:aspect-square">
