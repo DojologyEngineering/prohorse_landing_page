@@ -132,6 +132,13 @@
 }
 
 @layer base {
+  html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
   * {
     @apply border-border outline-ring/50;
   }

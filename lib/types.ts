@@ -60,6 +60,9 @@ export type TeamMember = {
 export type TeamContent = {
   eyebrow: string;
   title: string;
+  /** Founders shown as large quote cards (2-column) */
+  founders?: TeamMember[];
+  /** Core team members shown as compact 4-column cards */
   members: TeamMember[];
 };
 
