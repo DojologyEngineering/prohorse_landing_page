@@ -30,6 +30,23 @@ const ICONS = {
       />
     </svg>
   ),
+  arrowRight: (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.91663 7H11.0833M11.0833 7L7.58329 3.5M11.0833 7L7.58329 10.5"
+        stroke="white"
+        strokeWidth="1.16667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
 };
 
 // Generic Icon component
