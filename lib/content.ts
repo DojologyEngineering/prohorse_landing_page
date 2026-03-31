@@ -10,7 +10,7 @@ export const content: SiteContent = {
       { label: "Why Us", href: "#features" },
       { label: "FAQ", href: "#faq" },
     ],
-    cta: { label: "Start order", href: "#" },
+    cta: { label: "Shop Now", href: "#" },
   },
   hero: {
     eyebrow: "Farm-fresh products daily",
