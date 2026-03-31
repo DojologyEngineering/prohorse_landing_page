@@ -7,16 +7,19 @@ type FooterProps = {
   data: FooterContent;
 };
 
-function SocialIcon({ icon }: { icon: "facebook" | "globe" }) {
-  if (icon === "facebook") return <FiFacebook className="h-[18px] w-[18px]" />;
-  return <FiGlobe className="h-[18px] w-[18px]" />;
-}
+const SOCIAL_ICON_CLASS = "h-[18px] w-[18px]";
+const CONTACT_ICON_CLASS = "h-[15px] w-[15px]";
 
-function ContactIcon({ icon }: { icon: "map-pin" | "globe" | "facebook" }) {
-  if (icon === "map-pin") return <GrLocation className="h-[15px] w-[15px]" />;
-  if (icon === "facebook") return <FiFacebook className="h-[15px] w-[15px]" />;
-  return <FiGlobe className="h-[15px] w-[15px]" />;
-}
+const socialIconMap = {
+  facebook: FiFacebook,
+  globe: FiGlobe,
+} as const;
+
+const contactIconMap = {
+  "map-pin": GrLocation,
+  globe: FiGlobe,
+  facebook: FiFacebook,
+} as const;
 
 export function Footer({ data }: FooterProps) {
   const brandLabel = data.brand.replace(/\.+$/, "");
@@ -39,16 +42,19 @@ export function Footer({ data }: FooterProps) {
               {data.description}
             </p>
             <div className="mt-7 flex gap-3">
-              {data.socials.map((social) => (
-                <a
-                  key={social.label}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white/90 transition hover:bg-white/20"
-                  href={social.href}
-                  aria-label={social.label}
-                >
-                  <SocialIcon icon={social.icon} />
-                </a>
-              ))}
+              {data.socials.map((social) => {
+                const Icon = socialIconMap[social.icon];
+                return (
+                  <a
+                    key={social.label}
+                    aria-label={social.label}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white/90 transition hover:bg-white/20"
+                    href={social.href}
+                  >
+                    <Icon className={SOCIAL_ICON_CLASS} />
+                  </a>
+                );
+              })}
             </div>
           </section>
 
@@ -66,25 +72,28 @@ export function Footer({ data }: FooterProps) {
           <section>
             <h3 className="text-[12px] font-medium tracking-[0.08em] text-white/30">{data.contactTitle}</h3>
             <ul className="mt-6 space-y-4">
-              {data.contacts.map((contact) => (
-                <li key={contact.label}>
-                  <a
-                    className="inline-flex items-center gap-3 text-[14px] font-normal leading-[1.42] text-white/50 hover:text-white/80"
-                    href={contact.href}
-                  >
-                    <span className="text-brand-green">
-                      <ContactIcon icon={contact.icon} />
-                    </span>
-                    <span>{contact.label}</span>
-                  </a>
-                </li>
-              ))}
+              {data.contacts.map((contact) => {
+                const Icon = contactIconMap[contact.icon];
+                return (
+                  <li key={contact.label}>
+                    <a
+                      className="inline-flex items-center gap-3 text-[14px] font-normal leading-[1.42] text-white/50 hover:text-white/80"
+                      href={contact.href}
+                    >
+                      <span className="text-brand-green">
+                        <Icon className={CONTACT_ICON_CLASS} />
+                      </span>
+                      <span>{contact.label}</span>
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-5">
-          <div className="flex flex-col gap-2 md:pb-6 *:text-[12px] font-normal text-white/25 md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col items-center gap-2 text-[12px] font-normal text-white/25 md:flex-row md:justify-between md:pb-6">
             <p>{data.copyright}</p>
             <a className="hover:text-white/70" href={data.poweredByHref}>
               {data.poweredBy}
