@@ -36,7 +36,8 @@ export function Hero({ data }: HeroProps) {
           </h1>
 
           <p className="mt-5 text-[17px] text-white/70 leading-relaxed max-w-lg font-light">
-            Locally sourced from Cambodian farmers. Safe, fresh and at your door — fast
+            Locally sourced from Cambodian farmers. Safe, fresh and at your door
+            — fast
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -58,7 +59,7 @@ export function Hero({ data }: HeroProps) {
         </div>
 
         {/* Right: Hero Image */}
-        <div className="flex-1 flex justify-end">
+        <div className="hidden md:flex flex-1 justify-end">
           <Image
             src={container}
             alt="Hero"

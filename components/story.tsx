@@ -12,9 +12,15 @@ export function Story({ data }: StoryProps) {
       <div className="mx-auto w-full px-6 md:px-14 flex flex-col md:flex-row gap-16 lg:gap-24 w-full items-center">
         {/* Left: Image */}
         <div className="flex-1 w-full relative">
-           <div className="w-full relative aspect-[1.1] md:aspect-square">
-              <Image src={storyImg} alt="Our Story" fill className="object-contain object-center" priority />
-           </div>
+          <div className="w-full relative aspect-[1.1] md:aspect-square">
+            <Image
+              src={storyImg}
+              alt="Our Story"
+              fill
+              className="object-contain object-center"
+              priority
+            />
+          </div>
         </div>
 
         {/* Right: Content */}
@@ -40,8 +46,8 @@ export function Story({ data }: StoryProps) {
                 index === 0
                   ? "bg-[#F5FBF0] text-[#54A80A]"
                   : index === 1
-                  ? "bg-[#EFF5F9] text-[#196594]"
-                  : "bg-[#FFF8EF] text-[#E29D29]";
+                    ? "bg-[#EFF5F9] text-[#196594]"
+                    : "bg-[#FFF8EF] text-[#E29D29]";
 
               return (
                 <div
