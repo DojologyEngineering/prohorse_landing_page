@@ -29,7 +29,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --no-workspace
+        run: pnpm install
 
       - name: Build static export
         run: pnpm build
