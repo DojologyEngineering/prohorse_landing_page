@@ -23,10 +23,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build static export
-        run: npm run build
+        run: pnpm run build
 
       - name: Zip static output
         run: |
