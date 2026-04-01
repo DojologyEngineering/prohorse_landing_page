@@ -1,0 +1,40 @@
+name: Build and Upload Next.js Static (ZIP)
+
+on:
+  push:
+    branches:
+      - features/add_github_action
+  pull_request:
+    branches:
+      - features/add_github_action
+  workflow_dispatch:
+
+jobs:
+  build-static:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+
+      - name: Zip static output
+        run: |
+          cd out
+          zip -r ../nextjs-static.zip .
+
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nextjs-static-${{ github.sha }}
+          path: nextjs-static-${{ github.sha }}.zip
