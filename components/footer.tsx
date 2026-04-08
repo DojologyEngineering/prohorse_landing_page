@@ -1,8 +1,9 @@
 import type { FooterContent } from "@/lib/types";
-import { FiFacebook, FiGlobe } from "react-icons/fi";
+import { FiFacebook, FiGlobe, FiLinkedin  } from "react-icons/fi";
 import { PiTelegramLogoBold } from "react-icons/pi";
 import { GrLocation } from "react-icons/gr";
 import { LuLeaf } from "react-icons/lu";
+import { link } from "fs";
 
 type FooterProps = {
   data: FooterContent;
@@ -17,8 +18,7 @@ const socialIconMap = {
 } as const;
 
 const contactIconMap = {
-  "map-pin": GrLocation,
-  globe: FiGlobe,
+  linkedin: FiLinkedin,
   facebook: FiFacebook,
   telegram: PiTelegramLogoBold,
 } as const;
