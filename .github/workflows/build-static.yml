@@ -2,10 +2,10 @@ name: Build and Upload Next.js Static (ZIP)
 
 on:
   push:
-    branches:
+    tags:
       - 'release/*'
   pull_request:
-    branches:
+    tags:
       - 'release/*'
   workflow_dispatch:
 
