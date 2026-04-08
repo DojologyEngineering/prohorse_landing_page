@@ -25,7 +25,7 @@ export function Hero({ data }: HeroProps) {
           {/* Eyebrow badge */}
           <div className="inline-flex items-center gap-2 border border-[#6CC51D]/50 bg-[#6CC51D]/15 px-4 py-1 text-[12px] font-light text-[#8AE635]">
             <span className="h-[6px] w-[6px] rounded-full bg-[#8AE635]" />
-            Cambodia's Fresh Grocery Platform
+            Cambodia&apos;s Fresh Grocery Platform
           </div>
 
           <h1 className="mt-5 text-6xl md:text-[72px] font-black leading-[1.05] tracking-tight text-white">
