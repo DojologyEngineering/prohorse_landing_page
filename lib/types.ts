@@ -85,12 +85,12 @@ export type FooterContent = {
   contactTitle: string;
   links: LinkItem[];
   socials: Array<{
-    icon: "facebook" | "globe";
+    icon: "facebook" | "telegram";
     label: string;
     href: string;
   }>;
   contacts: Array<{
-    icon: "map-pin" | "globe" | "facebook";
+    icon: "map-pin" | "globe" | "facebook" | "telegram";
     label: string;
     href: string;
   }>;

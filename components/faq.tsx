@@ -72,7 +72,7 @@ export function Faq({ items }: FaqProps) {
           <p className="text-[14px] text-[#A0A8B4]">Still have questions?</p>
           <a
             className="mt-4 inline-flex h-10 items-center justify-center bg-brand-green px-5 text-[14px] font-semibold text-white transition hover:brightness-95"
-            href="#"
+            href="https://facebook.com/ProhoseOfficial"
           >
             Chat with us on Facebook
           </a>

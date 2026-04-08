@@ -1,5 +1,6 @@
 import type { FooterContent } from "@/lib/types";
 import { FiFacebook, FiGlobe } from "react-icons/fi";
+import { PiTelegramLogoBold } from "react-icons/pi";
 import { GrLocation } from "react-icons/gr";
 import { LuLeaf } from "react-icons/lu";
 
@@ -12,13 +13,14 @@ const CONTACT_ICON_CLASS = "h-[15px] w-[15px]";
 
 const socialIconMap = {
   facebook: FiFacebook,
-  globe: FiGlobe,
+  telegram: PiTelegramLogoBold,
 } as const;
 
 const contactIconMap = {
   "map-pin": GrLocation,
   globe: FiGlobe,
   facebook: FiFacebook,
+  telegram: PiTelegramLogoBold,
 } as const;
 
 export function Footer({ data }: FooterProps) {
@@ -31,14 +33,14 @@ export function Footer({ data }: FooterProps) {
           <section>
             <a className="inline-flex items-center gap-3" href="#">
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-green text-brand-black">
-                <LuLeaf className="h-[22px] w-[22px] text-white" />
+                <LuLeaf className="h-5.5 w-5.5 text-white" />
               </span>
               <span className="inline-flex items-end gap-0.5 text-[19px] font-black leading-none tracking-[-0.01em]">
                 <span>{brandLabel}</span>
-                <span className="mb-[2px] inline-block h-[4px] w-[4px] bg-brand-green" />
+                <span className="mb-0.5 inline-block h-1 w-1 bg-brand-green" />
               </span>
             </a>
-            <p className="mt-7 max-w-[400px] text-[14px] font-normal leading-[1.62] text-white/45">
+            <p className="mt-7 max-w-100 text-[14px] font-normal leading-[1.62] text-white/45">
               {data.description}
             </p>
             <div className="mt-7 flex gap-3">

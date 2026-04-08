@@ -2,7 +2,7 @@ import type { SiteContent } from "@/lib/types";
 
 export const content: SiteContent = {
   navbar: {
-    brand: "Prohorse",
+    brand: "Prohose",
     links: [
       { label: "Home", href: "#" },
       { label: "About", href: "#story" },
@@ -10,13 +10,13 @@ export const content: SiteContent = {
       { label: "Why Us", href: "#features" },
       { label: "FAQ", href: "#faq" },
     ],
-    cta: { label: "Shop Now", href: "#" },
+    cta: { label: "Shop Now", href: "https://t.me/prohoseofficialsafetyfood" },
   },
   hero: {
     eyebrow: "Farm-fresh products daily",
     title: "Farm-fresh groceries delivered to you.",
     description: "Structure scaffold ready for parallel section implementation and content iteration.",
-    primaryCta: { label: "Shop Now", href: "#" },
+    primaryCta: { label: "Shop Now", href: "https://t.me/prohoseofficialsafetyfood" },
     secondaryCta: { label: "Browse Products", href: "#" },
   },
   stats: [
@@ -62,44 +62,44 @@ export const content: SiteContent = {
     title: "The people behind the mission",
     founders: [
       {
-        name: "Sothy Chan",
-        role: "Founder & CEO",
-        bio: "Growing up in a small farming village outside Phnom Penh, I watched my parents struggle to sell their harvest at fair prices while city families paid more for less-fresh produce at the market. That gap — between the farmer and the family — became my obsession. In 2020, I started Prohose Official from our home kitchen with a single mission: use technology to close that gap. I wanted every Cambodian household to taste the same freshness I grew up with, and every local farmer to be valued fairly for their hard work. What began as a weekend project has grown into a platform serving hundreds of families — and it still drives me every single day.",
+        name: "Lon Molika Chau",
+        role: "Co-founder & CEO",
+        bio: "We are committed to making high-quality local products accessible to everyone, while empowering farmers and businesses to grow sustainably. Our leadership drives innovation, trust, and community impact across every step of the supply chain.",
       },
       {
-        name: "Maly Ros",
-        role: "Co-Founder & COO",
-        bio: "I've always believed that the way a community eats reflects how it cares for itself. When Sothy came to me with the idea for Prohose, I saw more than an e-commerce platform — I saw an opportunity to reshape how Cambodians think about food sourcing and sustainability. My background in supply chain and community development meant I could help build the operational backbone that makes fresh, reliable delivery possible. Every order that leaves a farmer's hands and reaches a family's table is a small win for our country's food future. That's the story I want Prohose to keep writing.",
+        name: "Sophea Tek",
+        role: "Co-founder & COO",
+        bio: "Behind every great service is a strong operation. We work closely with our partners and teams to deliver value at every step, with a focus on efficiency and seamless execution that ensures every product reaches customers reliably and on time.",
       },
     ],
     members: [
       {
-        name: "Kosal Seng",
-        role: "Head of Operations",
-        bio: "Smooth delivery is the promise we keep every single day.",
+        name: "Lymeng PEN",
+        role: "Co-founder & IT Partner",
+        bio: "Technology is our investment, we build digital infrastructure that empowers businesses and fuels economic growth.",
       },
       {
-        name: "Bopha Rin",
-        role: "Marketing Manager",
-        bio: "Telling our farmers' stories is the most meaningful work I do.",
+        name: "Sophanha Dout",
+        role: "Product Designer",
+        bio: "We design freshness you can trust—every step, from farm to table.",
       },
       {
-        name: "Veasna Noun",
-        role: "Logistics Coordinator",
-        bio: "From farm gate to front door — precision matters at every step.",
+        name: "Sharma Kumarilaxmi",
+        role: "Project Coordinator",
+        bio: "Bridging the gap between the soil and the digital market to help our farmers thrive.",
       },
       {
-        name: "Sreymom Pich",
-        role: "Customer Experience Lead",
-        bio: "Every happy customer is a family that trusts us with their table.",
+        name: "Sodalin Thai",
+        role: "Fullstack Developer",
+        bio: "We are dedicated to building products that tackle real challenges and deliver business value.",
       },
     ],
   },
   cta: {
     title: "Get fresh groceries delivered today.",
-    description: "Final CTA section for conversion-focused copy and actions.",
-    primaryCta: { label: "Shop now", href: "#" },
-    secondaryCta: { label: "Explore products", href: "#" },
+    description: "Shop from 200+ locally sourced products.",
+    primaryCta: { label: "Shop now", href: "https://t.me/prohoseofficialsafetyfood" },
+    secondaryCta: { label: "Explore products", href: "https://facebook.com/ProhoseOfficial" },
   },
   faq: [
     { question: "How fast is delivery?", answer: "Typical delivery is within the same day." },
@@ -121,13 +121,13 @@ export const content: SiteContent = {
       { label: "FAQ", href: "#faq" },
     ],
     socials: [
-      { icon: "facebook", label: "Facebook", href: "#" },
-      { icon: "globe", label: "Website", href: "#" },
+      { icon: "facebook", label: "Facebook", href: "https://facebook.com/ProhoseOfficial" },
+      { icon: "telegram", label: "Telegram", href: "https://t.me/prohoseofficialsafetyfood" },
     ],
     contacts: [
       { icon: "map-pin", label: "Phnom Penh, Cambodia", href: "#" },
-      { icon: "globe", label: "prohose-official.com", href: "#" },
-      { icon: "facebook", label: "ProhoseOfficial", href: "#" },
+      { icon: "telegram", label: "Prohorse Official", href: "https://t.me/prohoseofficialsafetyfood" },
+      { icon: "facebook", label: "ProhoseOfficial", href: "https://facebook.com/ProhoseOfficial" },
     ],
     copyright: "© 2026 Prohose Official. All rights reserved.",
     poweredBy: "Power by Dojology",

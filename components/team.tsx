@@ -1,4 +1,11 @@
+import Image from "next/image";
 import type { TeamContent } from "@/lib/types";
+import team1 from "@/app/asset/images/team1.webp";
+import team2 from "@/app/asset/images/team2.webp";
+import team3 from "@/app/asset/images/team3.webp";
+import team4 from "@/app/asset/images/team4.webp";
+import team5 from "@/app/asset/images/team5.webp";
+import team6 from "@/app/asset/images/team6.webp";
 
 type TeamProps = {
   data: TeamContent;
@@ -11,6 +18,15 @@ const CORE_COLORS = [
   { bar: "bg-[#1f6fa2]", avatar: "bg-[#1f6fa2]", role: "text-[#1f6fa2]" },
   { bar: "bg-[#6cc51d]", avatar: "bg-[#6cc51d]", role: "text-[#6cc51d]" },
 ];
+
+const TEAM_IMAGE_MAP = {
+  "Lon Molika Chau": team1,
+  "Sophea Tek": team2,
+  "Lymeng PEN": team3,
+  "Sophanha Dout": team4,
+  "Sharma Kumarilaxmi": team5,
+  "Sodalin Thai": team6,
+} as const;
 
 function getInitials(name: string) {
   return name
@@ -42,23 +58,35 @@ export function Team({ data }: TeamProps) {
         {founders.length > 0 && (
           <div className="grid grid-cols-1 gap-6 mb-10 md:grid-cols-2 md:gap-8">
             {founders.map((founder, i) => {
+              const photo = TEAM_IMAGE_MAP[founder.name as keyof typeof TEAM_IMAGE_MAP];
+              const hasBio = founder.bio.trim().length > 0;
               const color =
                 i === 0
-                  ? { bar: "bg-[#6cc51d]", avatar: "bg-[#6cc51d]", role: "text-[#6cc51d]", border: "border-l-[#6cc51d]", quote: "text-[#6cc51d]" }
-                  : { bar: "bg-[#1f6fa2]", avatar: "bg-[#1f6fa2]", role: "text-[#1f6fa2]", border: "border-l-[#1f6fa2]", quote: "text-[#1f6fa2]" };
+                  ? { bar: "bg-[#6cc51d]", avatar: "bg-[#6cc51d]", role: "text-[#6cc51d]", border: "border-l-[#6cc51d]" }
+                  : { bar: "bg-[#1f6fa2]", avatar: "bg-[#1f6fa2]", role: "text-[#1f6fa2]", border: "border-l-[#1f6fa2]" };
               return (
                 <div
                   key={founder.name}
                   className="overflow-hidden border border-[#f3f4f6] bg-white"
                 >
-                  <div className={`h-[6px] w-full ${color.bar}`} />
+                  <div className={`h-1.5 w-full ${color.bar}`} />
                   <div className="flex flex-col gap-6 p-6 sm:p-8">
                     {/* Avatar + Name */}
                     <div className="flex items-center gap-4 sm:gap-5">
                       <div
-                        className={`flex size-14 shrink-0 items-center justify-center text-white font-black text-[16px] sm:size-16 sm:text-[17.6px] ${color.avatar}`}
+                        className={`relative flex size-16 shrink-0 items-center justify-center overflow-hidden text-white font-black text-[16px] sm:size-20 sm:text-[17.6px] ${color.avatar}`}
                       >
-                        {getInitials(founder.name)}
+                        {photo ? (
+                          <Image
+                            src={photo}
+                            alt={founder.name}
+                            fill
+                            className="object-cover"
+                            sizes="80px"
+                          />
+                        ) : (
+                          getInitials(founder.name)
+                        )}
                       </div>
                       <div>
                         <p className="font-extrabold text-[15px] text-[#101828] leading-tight sm:text-[16.8px]">
@@ -70,16 +98,13 @@ export function Team({ data }: TeamProps) {
                       </div>
                     </div>
                     {/* Quote */}
-                    <div className={`relative border-l-[3px] ${color.border} pl-5`}>
-                      <span
-                        className={`absolute -left-[9px] -top-3 text-[36px] font-normal ${color.quote} opacity-25 leading-none select-none`}
-                      >
-                        &quot;
-                      </span>
-                      <p className="text-sm text-[#6a7282] leading-[1.85]">
-                        {founder.bio}
-                      </p>
-                    </div>
+                    {hasBio && (
+                      <div className={`border-l-[3px] ${color.border} pl-5`}>
+                        <p className="text-sm italic text-[#6a7282] leading-[1.85]">
+                          &quot;{founder.bio}&quot;
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               );
@@ -99,19 +124,31 @@ export function Team({ data }: TeamProps) {
         {/* Core Team Grid — 2 cols on mobile, 4 on desktop */}
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {coreMembers.map((member, i) => {
+            const photo = TEAM_IMAGE_MAP[member.name as keyof typeof TEAM_IMAGE_MAP];
+            const hasBio = member.bio.trim().length > 0;
             const color = CORE_COLORS[i % CORE_COLORS.length];
             return (
               <div
                 key={member.name}
                 className="overflow-hidden border border-[#f3f4f6] bg-white"
               >
-                <div className={`h-[4px] w-full ${color.bar}`} />
+                <div className={`h-1 w-full ${color.bar}`} />
                 <div className="p-4 sm:p-5">
                   {/* Avatar */}
                   <div
-                    className={`flex size-10 items-center justify-center text-white font-black text-[12px] sm:size-12 sm:text-[13.6px] ${color.avatar}`}
+                    className={`relative flex size-12 items-center justify-center overflow-hidden text-white font-black text-[12px] sm:size-14 sm:text-[13.6px] ${color.avatar}`}
                   >
-                    {getInitials(member.name)}
+                    {photo ? (
+                      <Image
+                        src={photo}
+                        alt={member.name}
+                        fill
+                        className="object-cover"
+                        sizes="56px"
+                      />
+                    ) : (
+                      getInitials(member.name)
+                    )}
                   </div>
                   {/* Name & Role */}
                   <p className="mt-3 font-extrabold text-[13px] text-[#101828] leading-tight sm:text-[14.4px]">
@@ -121,11 +158,15 @@ export function Team({ data }: TeamProps) {
                     {member.role}
                   </p>
                   {/* Divider */}
-                  <div className="my-3 h-px bg-[#f3f4f6]" />
-                  {/* Bio / Quote */}
-                  <p className="text-[11px] italic text-[#99a1af] leading-[1.75] sm:text-xs">
-                    &quot;{member.bio}&quot;
-                  </p>
+                  {hasBio && (
+                    <>
+                      <div className="my-3 h-px bg-[#f3f4f6]" />
+                      {/* Bio / Quote */}
+                      <p className="text-[11px] italic text-[#99a1af] leading-[1.75] sm:text-xs">
+                        &quot;{member.bio}&quot;
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
             );
