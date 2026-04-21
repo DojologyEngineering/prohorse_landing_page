@@ -105,7 +105,7 @@ export type FooterContent = {
     href: string;
   }>;
   contacts: Array<{
-    icon: "map-pin" | "globe" | "facebook" | "telegram";
+    icon: "linkedin" | "facebook" | "telegram";
     label: string;
     href: string;
   }>;

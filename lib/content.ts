@@ -165,12 +165,12 @@ export const content: SiteContent = {
       { icon: "telegram", label: "Telegram", href: "https://t.me/prohoseofficialsafetyfood" },
     ],
     contacts: [
-      { icon: "map-pin", label: "Phnom Penh, Cambodia", href: "#" },
-      { icon: "telegram", label: "Prohorse Official", href: "https://t.me/prohoseofficialsafetyfood" },
-      { icon: "facebook", label: "ProhoseOfficial", href: "https://facebook.com/ProhoseOfficial" },
+      { icon: "facebook", label: "Facebook", href: "https://facebook.com/ProhoseOfficial" },
+      { icon: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/company/prohose-official" },
+      { icon: "telegram", label: "Telegram", href: "https://t.me/prohoseofficialsafetyfood" },
     ],
     copyright: "© 2026 Prohose Official. All rights reserved.",
     poweredBy: "Power by Dojology",
-    poweredByHref: "#",
+    poweredByHref: "https://facebook.com/dojologytechandventures",
   },
 };
