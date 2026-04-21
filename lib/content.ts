@@ -8,6 +8,7 @@ export const content: SiteContent = {
       { label: "About", href: "#story" },
       { label: "Products", href: "#products" },
       { label: "Why Us", href: "#features" },
+      { label: "Awards", href: "#awards" },
       { label: "FAQ", href: "#faq" },
     ],
     cta: { label: "Shop Now", href: "https://t.me/prohoseofficialsafetyfood" },
@@ -28,7 +29,7 @@ export const content: SiteContent = {
   story: {
     eyebrow: "OUR STORY",
     title: "Born from a love for local flavors.",
-    description: "Prohose Official began in a home kitchen in 2020. Today we connect local Cambodian farmers and SMEs with families — making fresh, quality groceries accessible for everyone.",
+    description: "On [[Thursday, 19 March 2020]], when the government announced the lockdown, Phnom Penh stopped instantly. The main markets closed, our supply chain from smallholder farmers broke down, and our offline retail mart had no customers at all.\n\nThat night, my core team and I gathered in the office and made one decisive move: shift online overnight. Within hours, we created our first [[Facebook]] and [[Instagram channels]] and named it [[Prohose]].\n\nThis was the beginning of a new journey born from crisis, driven by resilience.",
     highlights: [
       { title: "2020", text: "Founded" },
       { title: "2021", text: "Registered SME" },
@@ -41,9 +42,9 @@ export const content: SiteContent = {
     viewAllHref: "#",
     items: [
       { name: "Mixed Greens", category: "Vegetables" },
-      { name: "Fresh Tomatoes", category: "Vegetables" },
-      { name: "Organic Spinach", category: "Vegetables" },
-      { name: "Local Herbs", category: "Groceries" },
+      { name: "Fresh Melon", category: "Vegetables" },
+      { name: "Pink Guava", category: "Fruits" },
+      { name: "Fresh Guava", category: "Fruits" },
       { name: "Cambodian Mango", category: "Fruits" },
       { name: "Sweet Watermelon", category: "Fruits" },
       { name: "Dragon Fruit", category: "Fruits" },
@@ -79,21 +80,60 @@ export const content: SiteContent = {
         bio: "Technology is our investment, we build digital infrastructure that empowers businesses and fuels economic growth.",
       },
       {
-        name: "Sophanha Dout",
-        role: "Product Designer",
-        bio: "We design freshness you can trust—every step, from farm to table.",
+        name: "Sokchea Chem",
+        role: "Relationship Manager",
+        bio: "Building strong partnerships with our customers and suppliers to create lasting value and trust in every transaction.",
       },
       {
-        name: "Sharma Kumarilaxmi",
-        role: "Project Coordinator",
-        bio: "Bridging the gap between the soil and the digital market to help our farmers thrive.",
+        name: "Sreynich Doem",
+        role: "Accounting Manager",
+        bio: "Managing financial excellence and operational efficiency to ensure sustainable growth and transparent business practices.",
       },
       {
-        name: "Sodalin Thai",
-        role: "Fullstack Developer",
-        bio: "We are dedicated to building products that tackle real challenges and deliver business value.",
+        name: "Sreypov Neang",
+        role: "Ordering Team",
+        bio: "Coordinating seamless order fulfillment to ensure our customers receive fresh products on time, every time.",
+      },
+      {
+        name: "Meassaly Seng",
+        role: "Packaging Team",
+        bio: "Ensuring every product is carefully packaged with care and quality, protecting freshness from our fields to your doorstep.",
+      },
+      {
+        name: "Sopheaktra Yeam",
+        role: "Tele-Sales",
+        bio: "Connecting with customers through personalized service and bringing our fresh products directly to those who need them most.",
+      },
+      {
+        name: "Savorly Born",
+        role: "Tele-Sales",
+        bio: "Dedicated to delivering exceptional customer service and helping families discover the freshest local groceries available.",
       },
     ],
+  },
+  awards: {
+    eyebrow: "Recognition",
+    title: "Awards & Achievements",
+    description:
+      "Our commitment to innovation and local impact has been recognized on national and regional stages - fueling us to keep growing.",
+    items: [
+      {
+        title: "Digital Entrepreneur of The Year",
+        label: "Award",
+        description:
+          "Recognized as a leading digital entrepreneur driving meaningful change in Cambodia's agricultural and e-commerce landscape through technology and innovation.",
+        imageAlt: "Digital Entrepreneur of The Year award ceremony",
+      },
+      {
+        title: "Reverse Innovation Cohort 05",
+        label: "4th Place Award",
+        description:
+          "Achieved 4th place in the prestigious Reverse Innovation Cohort 05 program, demonstrating Prohose Official's innovative approach to solving local food supply challenges.",
+        imageAlt: "Reverse Innovation Cohort 05 presentation and award ceremony",
+      },
+    ],
+    note:
+      "These milestones reflect not just our growth, but the collective effort of our farmers, partners, and team - and they inspire us to aim higher every single day.",
   },
   cta: {
     title: "Get fresh groceries delivered today.",

@@ -51,6 +51,21 @@ export type FeatureItem = {
   description: string;
 };
 
+export type AwardItem = {
+  title: string;
+  label: string;
+  description: string;
+  imageAlt: string;
+};
+
+export type AwardsContent = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: AwardItem[];
+  note: string;
+};
+
 export type TeamMember = {
   name: string;
   role: string;
@@ -107,6 +122,7 @@ export type SiteContent = {
   products: ProductsContent;
   features: FeatureItem[];
   team: TeamContent;
+  awards: AwardsContent;
   cta: CtaContent;
   faq: FaqItem[];
   footer: FooterContent;

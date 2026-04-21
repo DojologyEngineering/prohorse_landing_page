@@ -1,3 +1,5 @@
+import { Flower } from "lucide-react";
+
 const ICONS = {
   bag: (
     <svg

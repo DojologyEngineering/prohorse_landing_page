@@ -149,3 +149,32 @@
     @apply font-sans;
   }
 }
+
+@keyframes awardImageFade {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.award-image-fade {
+  animation: awardImageFade 8s ease-in-out infinite;
+}
+
+.award-image-fade-delay {
+  animation-delay: 4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .award-image-fade,
+  .award-image-fade-delay {
+    animation: none;
+  }
+}

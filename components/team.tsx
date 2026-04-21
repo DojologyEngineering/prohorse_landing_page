@@ -1,11 +1,14 @@
 import Image from "next/image";
 import type { TeamContent } from "@/lib/types";
-import team1 from "@/app/asset/images/team1.webp";
-import team2 from "@/app/asset/images/team2.webp";
+import team1 from "@/app/asset/images/founder1.webp";
+import team2 from "@/app/asset/images/founder2.webp";
 import team3 from "@/app/asset/images/team3.webp";
-import team4 from "@/app/asset/images/team4.webp";
-import team5 from "@/app/asset/images/team5.webp";
-import team6 from "@/app/asset/images/team6.webp";
+import team4 from "@/app/asset/images/manager1.webp";
+import team5 from "@/app/asset/images/manager2.webp";
+import team6 from "@/app/asset/images/team2.webp";
+import team7 from "@/app/asset/images/team1.webp";
+import team8 from "@/app/asset/images/sale1.webp";
+import team9 from "@/app/asset/images/sale2.webp";
 
 type TeamProps = {
   data: TeamContent;
@@ -16,16 +19,22 @@ const CORE_COLORS = [
   { bar: "bg-[#6cc51d]", avatar: "bg-[#6cc51d]", role: "text-[#6cc51d]" },
   { bar: "bg-[#f9a825]", avatar: "bg-[#f9a825]", role: "text-[#f9a825]" },
   { bar: "bg-[#1f6fa2]", avatar: "bg-[#1f6fa2]", role: "text-[#1f6fa2]" },
-  { bar: "bg-[#6cc51d]", avatar: "bg-[#6cc51d]", role: "text-[#6cc51d]" },
+  { bar: "bg-[#e91e63]", avatar: "bg-[#e91e63]", role: "text-[#e91e63]" },
+  { bar: "bg-[#9c27b0]", avatar: "bg-[#9c27b0]", role: "text-[#9c27b0]" },
+  { bar: "bg-[#00bcd4]", avatar: "bg-[#00bcd4]", role: "text-[#00bcd4]" },
+  { bar: "bg-[#ff5722]", avatar: "bg-[#ff5722]", role: "text-[#ff5722]" },
 ];
 
 const TEAM_IMAGE_MAP = {
   "Lon Molika Chau": team1,
   "Sophea Tek": team2,
   "Lymeng PEN": team3,
-  "Sophanha Dout": team4,
-  "Sharma Kumarilaxmi": team5,
-  "Sodalin Thai": team6,
+  "Sokchea Chem": team4,
+  "Sreynich Doem": team5,
+  "Sreypov Neang": team6,
+  "Meassaly Seng": team7,
+  "Sopheaktra Yeam": team8,
+  "Savorly Born": team9,
 } as const;
 
 function getInitials(name: string) {
@@ -121,12 +130,64 @@ export function Team({ data }: TeamProps) {
           <div className="flex-1 h-px bg-[#e5e7eb]" />
         </div>
 
-        {/* Core Team Grid — 2 cols on mobile, 4 on desktop */}
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-          {coreMembers.map((member, i) => {
+        {/* Core Team Grid — Row 1: 3 cols, Row 2: 4 cols */}
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
+          {coreMembers.slice(0, 3).map((member, i) => {
             const photo = TEAM_IMAGE_MAP[member.name as keyof typeof TEAM_IMAGE_MAP];
             const hasBio = member.bio.trim().length > 0;
             const color = CORE_COLORS[i % CORE_COLORS.length];
+            return (
+              <div
+                key={member.name}
+                className="overflow-hidden border border-[#f3f4f6] bg-white"
+              >
+                <div className={`h-1 w-full ${color.bar}`} />
+                <div className="p-4 sm:p-5">
+                  {/* Avatar */}
+                  <div
+                    className={`relative flex size-12 items-center justify-center overflow-hidden text-white font-black text-[12px] sm:size-14 sm:text-[13.6px] ${color.avatar}`}
+                  >
+                    {photo ? (
+                      <Image
+                        src={photo}
+                        alt={member.name}
+                        fill
+                        className="object-cover"
+                        sizes="56px"
+                      />
+                    ) : (
+                      getInitials(member.name)
+                    )}
+                  </div>
+                  {/* Name & Role */}
+                  <p className="mt-3 font-extrabold text-[13px] text-[#101828] leading-tight sm:text-[14.4px]">
+                    {member.name}
+                  </p>
+                  <p className={`text-[11px] font-bold mt-0.5 sm:text-xs ${color.role}`}>
+                    {member.role}
+                  </p>
+                  {/* Divider */}
+                  {hasBio && (
+                    <>
+                      <div className="my-3 h-px bg-[#f3f4f6]" />
+                      {/* Bio / Quote */}
+                      <p className="text-[11px] italic text-[#99a1af] leading-[1.75] sm:text-xs">
+                        &quot;{member.bio}&quot;
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Core Team Row 2 — 4 cols on desktop */}
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 mt-4">
+          {coreMembers.slice(3).map((member, i) => {
+            const photo = TEAM_IMAGE_MAP[member.name as keyof typeof TEAM_IMAGE_MAP];
+            const hasBio = member.bio.trim().length > 0;
+            const color = CORE_COLORS[(i + 3) % CORE_COLORS.length];
             return (
               <div
                 key={member.name}
