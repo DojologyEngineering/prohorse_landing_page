@@ -1,6 +1,6 @@
 import type { HeroContent } from "@/lib/types";
 import Image from "next/image";
-import heroBg from "@/app/asset/images/Hero.svg";
+import heroBg from "@/app/asset/images/Hero.webp";
 import Icon from "@/app/asset/icons/icon-asset";
 import container from "@/app/asset/images/Container.svg";
 

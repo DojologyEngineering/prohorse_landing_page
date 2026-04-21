@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Prohose",
   description: "Fresh groceries delivered with speed and quality.",
+  icons: {
+    icon: "/1logo.svg",
+    shortcut: "/1logo.svg",
+    apple: "/1logo.svg",
+  },
 };
 
 export default function RootLayout({
