@@ -1,10 +1,37 @@
 import type { StoryContent } from "@/lib/types";
 import Image from "next/image";
-import storyImg from "@/app/asset/images/Container1.svg";
+import storyImg from "@/app/asset/images/Container.webp";
 
 type StoryProps = {
   data: StoryContent;
 };
+
+function renderInlineText(text: string) {
+  return text.split(/(\[\[[\s\S]+?\]\])/g).map((part, index) => {
+    if (part.startsWith("[[") && part.endsWith("]]")) {
+      return (
+        <span
+          key={index}
+        >
+          {part.slice(2, -2)}
+        </span>
+      );
+    }
+
+    return <span key={index}>{part}</span>;
+  });
+}
+
+function renderDescription(description: string) {
+  return description.split("\n\n").map((paragraph, index) => (
+    <p
+      key={index}
+      className="text-[15px] md:text-[17px]"
+    >
+      {renderInlineText(paragraph)}
+    </p>
+  ));
+}
 
 export function Story({ data }: StoryProps) {
   return (
@@ -31,14 +58,18 @@ export function Story({ data }: StoryProps) {
           </div>
 
           <h2 className="mb-6 text-5xl md:text-[48px] leading-[1.15] font-black text-[#1F2937] tracking-tight">
-            Born from a love for <br />
-            <span className="text-[#6CC51D]">local flavors</span>
+            Prohose 
+            <span className="text-[#6CC51D]"> Rooted</span>
             <span className="ml-[3px] inline-block pl-1 h-[11px] w-[11px] bg-[#101828]" />
           </h2>
 
-          <p className="mb-10 text-[16px] text-[#99A1AF] leading-[1.8]">
-            {data.description}
+          <p className="mb-6 text-[13px] md:text-[15px] font-semibold italic text-[#5D8F3F]">
+            Built on 17 years of agribusiness experience in Cambodia&apos;s wholesale and retail sector
           </p>
+
+          <div className="mb-8 space-y-4">
+            {renderDescription(data.description)}
+          </div>
 
           <div className="flex flex-col gap-4">
             {data.highlights.map((highlight, index) => {

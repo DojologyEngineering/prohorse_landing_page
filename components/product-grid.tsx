@@ -4,12 +4,12 @@ import { useState } from "react";
 import type { ProductsContent } from "@/lib/types";
 
 const PRODUCT_IMAGES: Record<string, string> = {
-  "Mixed Greens": "/images/Mixed-Greens.png",
-  "Fresh Tomatoes": "/images/Fresh-Tomatoes.png",
-  "Organic Spinach": "/images/Organic-Spinach.png",
-  "Local Herbs": "/images/Local-Herbs.png",
-  "Cambodian Mango": "/images/Cambodian-Mango.png",
-  "Sweet Watermelon": "/images/Sweet-Watermelon.png",
+  "Mixed Greens": "/images/img6.webp",
+  "Fresh Melon": "/images/img7.webp",
+  "Pink Guava": "/images/img8.webp",
+  "Fresh Guava": "/images/img9.webp",
+  "Cambodian Mango": "/images/cambodian-mango.png",
+  "Sweet Watermelon": "/images/sweet-watermelon.png",
   "Dragon Fruit": "/images/Dragon-Fruit.png",
   "Jasmine Rice": "/images/Jasmine-Rice.png",
 };
