@@ -162,6 +162,7 @@ export const content: SiteContent = {
     ],
     socials: [
       { icon: "facebook", label: "Facebook", href: "https://facebook.com/ProhoseOfficial" },
+      { icon: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/company/prohose-official" },
       { icon: "telegram", label: "Telegram", href: "https://t.me/prohoseofficialsafetyfood" },
     ],
     contacts: [

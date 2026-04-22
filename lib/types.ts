@@ -100,7 +100,7 @@ export type FooterContent = {
   contactTitle: string;
   links: LinkItem[];
   socials: Array<{
-    icon: "facebook" | "telegram";
+    icon: "facebook" | "linkedin" | "telegram";
     label: string;
     href: string;
   }>;
