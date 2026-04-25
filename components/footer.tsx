@@ -1,9 +1,7 @@
 import type { FooterContent } from "@/lib/types";
-import { FiFacebook, FiGlobe, FiLinkedin  } from "react-icons/fi";
+import Image from "next/image";
+import { FiFacebook, FiLinkedin  } from "react-icons/fi";
 import { PiTelegramLogoBold } from "react-icons/pi";
-import { GrLocation } from "react-icons/gr";
-import { LuLeaf } from "react-icons/lu";
-import { link } from "fs";
 
 type FooterProps = {
   data: FooterContent;
@@ -14,6 +12,7 @@ const CONTACT_ICON_CLASS = "h-[15px] w-[15px]";
 
 const socialIconMap = {
   facebook: FiFacebook,
+  linkedin: FiLinkedin,
   telegram: PiTelegramLogoBold,
 } as const;
 
@@ -31,10 +30,8 @@ export function Footer({ data }: FooterProps) {
       <div className="mx-auto w-full px-6 md:px-14 pb-5 pt-14">
         <div className="grid gap-10 md:grid-cols-[1.6fr_0.8fr_0.6fr]">
           <section>
-            <a className="inline-flex items-center gap-3" href="#">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-green text-brand-black">
-                <LuLeaf className="h-5.5 w-5.5 text-white" />
-              </span>
+            <a className="inline-flex items-center gap-2" href="#">
+              <Image src="/1logo.svg" alt="Prohose logo" width={32} height={32} />
               <span className="inline-flex items-end gap-0.5 text-[19px] font-black leading-none tracking-[-0.01em]">
                 <span>{brandLabel}</span>
                 <span className="mb-0.5 inline-block h-1 w-1 bg-brand-green" />
