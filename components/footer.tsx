@@ -94,7 +94,10 @@ export function Footer({ data }: FooterProps) {
         <div className="mt-10 border-t border-white/10 pt-5">
           <div className="flex flex-col items-center gap-2 text-[12px] font-normal text-white/25 md:flex-row md:justify-between md:pb-6">
             <p>{data.copyright}</p>
-            <a className="hover:text-white/70" href={data.poweredByHref}>
+            <a
+              className="underline decoration-current underline-offset-4 transition hover:text-white/70"
+              href={data.poweredByHref}
+            >
               {data.poweredBy}
             </a>
           </div>
