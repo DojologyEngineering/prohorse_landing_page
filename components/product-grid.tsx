@@ -8,8 +8,8 @@ const PRODUCT_IMAGES: Record<string, string> = {
   "Fresh Melon": "/images/img7.webp",
   "Pink Guava": "/images/img8.webp",
   "Fresh Guava": "/images/img9.webp",
-  "Cambodian Mango": "/images/cambodian-mango.png",
-  "Sweet Watermelon": "/images/sweet-watermelon.png",
+  "Cambodian Mango": "/images/Cambodian-Mango.png",
+  "Sweet Watermelon": "/images/Sweet-Watermelon.png",
   "Dragon Fruit": "/images/Dragon-Fruit.png",
   "Jasmine Rice": "/images/Jasmine-Rice.png",
 };
