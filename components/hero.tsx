@@ -11,7 +11,7 @@ type HeroProps = {
 export function Hero({ data }: HeroProps) {
   return (
     <section
-      className="relative w-full hero-vh md:min-h-screen flex items-start pt-10 md:items-center md:pt-0 overflow-hidden"
+      className="relative w-full min-h-[90svh] md:min-h-screen flex items-start pt-10 md:items-center md:pt-0 overflow-hidden"
       id="hero"
       style={{
         backgroundImage: `url(${heroBg.src})`,
@@ -68,7 +68,7 @@ export function Hero({ data }: HeroProps) {
           />
         </div>
       </div>
-      <div className="pointer-events-none absolute left-0 bottom-0 w-full overflow-hidden leading-none">
+      <div className="pointer-events-none fixed left-0 bottom-0 w-full overflow-hidden leading-none z-50">
         <div className="wave-bob h-24 w-full">
           <div className="wave-track h-24 w-[200%]">
             <svg
