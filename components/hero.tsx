@@ -13,15 +13,12 @@ export function Hero({ data }: HeroProps) {
     <section
       className="relative w-full min-h-[90dvh] md:min-h-screen flex items-start pt-10 md:items-center md:pt-0 overflow-hidden"
       id="hero"
+      style={{
+        backgroundImage: `url(${heroBg.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "bottom",
+      }}
     >
-      {/* Background image as positioned element to avoid viewport-resize jitter */}
-      <Image
-        src={heroBg}
-        alt="Hero background"
-        fill
-        className="fixed md:absolute inset-0 -z-10 object-cover"
-        priority
-      />
       <div className="mx-auto w-full px-6 md:px-14 flex items-start md:items-center justify-between gap-12">
         {/* Left: Text Content */}
         <div className="flex-1 max-w-xl">
@@ -72,10 +69,10 @@ export function Hero({ data }: HeroProps) {
         </div>
       </div>
       <div className="pointer-events-none absolute left-0 bottom-0 w-full overflow-hidden leading-none">
-        <div className="wave-bob h-24 w-full">
-          <div className="wave-track h-24 w-[200%]">
+        <div className="wave-bob w-full">
+          <div className="wave-track w-[200%]">
             <svg
-              className="block h-24 w-1/2"
+              className="block w-1/2"
               viewBox="0 0 1440 120"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="none"
@@ -84,7 +81,7 @@ export function Hero({ data }: HeroProps) {
               <path d="M0,60 Q180,28 360,60 T720,60 T1080,60 T1440,60 L1440,120 L0,120 Z" fill="white" />
             </svg>
             <svg
-              className="block h-24 w-1/2"
+              className="block w-1/2"
               viewBox="0 0 1440 120"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="none"
