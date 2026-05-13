@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import type { HeroContent } from "@/lib/types";
 import Image from "next/image";
 import heroBg from "@/app/asset/images/Hero.svg";
@@ -12,29 +9,8 @@ type HeroProps = {
 };
 
 export function Hero({ data }: HeroProps) {
-  const heroRef = useRef<HTMLElement | null>(null);
-  const [waveFixed, setWaveFixed] = useState(false);
-
-  useEffect(() => {
-    const el = heroRef.current;
-    if (!el || typeof window === "undefined") return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setWaveFixed(entry.isIntersecting && entry.intersectionRatio > 0);
-        });
-      },
-      { root: null, threshold: 0 }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
-      ref={heroRef}
       className="relative w-full min-h-[90svh] md:min-h-screen flex items-start pt-10 md:items-center md:pt-0 overflow-hidden"
       id="hero"
       style={{
@@ -92,14 +68,8 @@ export function Hero({ data }: HeroProps) {
           />
         </div>
       </div>
-      <div
-        className={
-          `pointer-events-none w-full overflow-hidden leading-none ${
-            waveFixed ? "fixed bottom-0 left-0 z-0" : "absolute left-0 bottom-0"
-          }`
-        }
-      >
-        <div className="h-24 w-full">
+      <div className="pointer-events-none absolute left-0 bottom-0 w-full overflow-hidden leading-none">
+        <div className="wave-bob h-24 w-full">
           <div className="wave-track h-24 w-[200%]">
             <svg
               className="block h-24 w-1/2"
