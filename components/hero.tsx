@@ -11,7 +11,7 @@ type HeroProps = {
 export function Hero({ data }: HeroProps) {
   return (
     <section
-      className="relative w-full min-h-[90svh] md:min-h-screen flex items-start pt-28 md:items-center md:pt-0 overflow-hidden"
+      className="relative w-full min-h-[90svh] md:min-h-screen flex items-start pt-10 md:items-center md:pt-0 overflow-hidden"
       id="hero"
       style={{
         backgroundImage: `url(${heroBg.src})`,
