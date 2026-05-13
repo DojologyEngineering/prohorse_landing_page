@@ -19,7 +19,7 @@ export function Hero({ data }: HeroProps) {
         src={heroBg}
         alt="Hero background"
         fill
-        className="absolute inset-0 -z-10 object-cover"
+        className="fixed md:absolute inset-0 -z-10 object-cover"
         priority
       />
       <div className="mx-auto w-full px-6 md:px-14 flex items-start md:items-center justify-between gap-12">
