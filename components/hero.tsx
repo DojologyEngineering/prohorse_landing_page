@@ -1,6 +1,6 @@
 import type { HeroContent } from "@/lib/types";
 import Image from "next/image";
-import heroBg from "@/app/asset/images/Hero.webp";
+import heroBg from "@/app/asset/images/Hero.svg";
 import Icon from "@/app/asset/icons/icon-asset";
 import container from "@/app/asset/images/Container.svg";
 
@@ -11,7 +11,7 @@ type HeroProps = {
 export function Hero({ data }: HeroProps) {
   return (
     <section
-      className="w-full min-h-screen flex items-center"
+      className="relative w-full min-h-[90svh] md:min-h-screen flex items-start pt-28 md:items-center md:pt-0 overflow-hidden"
       id="hero"
       style={{
         backgroundImage: `url(${heroBg.src})`,
@@ -19,7 +19,7 @@ export function Hero({ data }: HeroProps) {
         backgroundPosition: "bottom",
       }}
     >
-      <div className="mx-auto w-full px-6 md:px-14 flex items-center justify-between gap-12">
+      <div className="mx-auto w-full px-6 md:px-14 flex items-start md:items-center justify-between gap-12">
         {/* Left: Text Content */}
         <div className="flex-1 max-w-xl">
           {/* Eyebrow badge */}
@@ -68,6 +68,31 @@ export function Hero({ data }: HeroProps) {
           />
         </div>
       </div>
+      <div className="pointer-events-none absolute left-0 bottom-0 w-full overflow-hidden leading-none">
+        <div className="wave-bob h-24 w-full">
+          <div className="wave-track h-24 w-[200%]">
+            <svg
+              className="block h-24 w-1/2"
+              viewBox="0 0 1440 120"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path d="M0,60 Q180,28 360,60 T720,60 T1080,60 T1440,60 L1440,120 L0,120 Z" fill="white" />
+            </svg>
+            <svg
+              className="block h-24 w-1/2"
+              viewBox="0 0 1440 120"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path d="M0,60 Q180,28 360,60 T720,60 T1080,60 T1440,60 L1440,120 L0,120 Z" fill="white" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 }
