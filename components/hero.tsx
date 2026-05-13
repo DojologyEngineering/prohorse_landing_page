@@ -13,12 +13,15 @@ export function Hero({ data }: HeroProps) {
     <section
       className="relative w-full min-h-[90dvh] md:min-h-screen flex items-start pt-10 md:items-center md:pt-0 overflow-hidden"
       id="hero"
-      style={{
-        backgroundImage: `url(${heroBg.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "bottom",
-      }}
     >
+      {/* Background image as positioned element to avoid viewport-resize jitter */}
+      <Image
+        src={heroBg}
+        alt="Hero background"
+        fill
+        className="absolute inset-0 -z-10 object-cover"
+        priority
+      />
       <div className="mx-auto w-full px-6 md:px-14 flex items-start md:items-center justify-between gap-12">
         {/* Left: Text Content */}
         <div className="flex-1 max-w-xl">
