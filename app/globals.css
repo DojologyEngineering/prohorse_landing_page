@@ -172,9 +172,46 @@
   animation-delay: 4s;
 }
 
+@keyframes waveSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes waveBob {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(0) translateY(8px);
+  }
+}
+
+.wave-track {
+  display: flex;
+  animation: waveSlide 12s linear infinite;
+  will-change: transform;
+}
+
+.wave-bob {
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.08));
+  animation: waveBob 4s ease-in-out infinite;
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .award-image-fade,
   .award-image-fade-delay {
+    animation: none;
+  }
+  .wave-track {
+    animation: none;
+  }
+  .wave-bob {
     animation: none;
   }
 }
