@@ -144,6 +144,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
   }
   html {
     @apply font-sans;
@@ -214,4 +216,9 @@
   .wave-bob {
     animation: none;
   }
+}
+
+/* Use the JS-set --vh variable for reliable mobile full-height handling. */
+.hero-vh {
+  min-height: calc(var(--vh, 1vh) * 90);
 }
