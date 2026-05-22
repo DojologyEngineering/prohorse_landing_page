@@ -11,13 +11,13 @@ export const content: SiteContent = {
       { label: "Awards", href: "#awards" },
       { label: "FAQ", href: "#faq" },
     ],
-    cta: { label: "Shop Now", href: "https://t.me/prohoseofficialsafetyfood" },
+    cta: { label: "Shop Now", href: "https://prohose.store/" },
   },
   hero: {
     eyebrow: "Farm-fresh products daily",
     title: "Farm-fresh groceries delivered to you.",
     description: "Structure scaffold ready for parallel section implementation and content iteration.",
-    primaryCta: { label: "Shop Now", href: "https://t.me/prohoseofficialsafetyfood" },
+    primaryCta: { label: "Shop Now", href: "https://prohose.store/" },
     secondaryCta: { label: "Browse Products", href: "#" },
   },
   stats: [
@@ -138,7 +138,7 @@ export const content: SiteContent = {
   cta: {
     title: "Get fresh groceries delivered today.",
     description: "Shop from 200+ locally sourced products.",
-    primaryCta: { label: "Shop now", href: "https://t.me/prohoseofficialsafetyfood" },
+    primaryCta: { label: "Shop now", href: "https://prohose.store/" },
     secondaryCta: { label: "Explore products", href: "https://facebook.com/ProhoseOfficial" },
   },
   faq: [

@@ -30,6 +30,8 @@ export function CtaBanner({ data }: CtaBannerProps) {
                 <a
                   className="inline-flex h-12 items-center justify-center gap-2 bg-brand-green px-8 text-[14px] font-semibold text-white"
                   href={data.primaryCta.href}
+                  target={data.primaryCta.href?.startsWith("http") ? "_blank" : undefined}
+                  rel={data.primaryCta.href?.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
                   <FiShoppingBag className="h-4 w-4" />
                   {data.primaryCta.label}
@@ -37,6 +39,8 @@ export function CtaBanner({ data }: CtaBannerProps) {
                 <a
                   className="inline-flex h-12 items-center justify-center border border-white/25 bg-white/6 px-8 text-[14px] font-semibold text-white backdrop-blur-[1px]"
                   href={data.secondaryCta.href}
+                  target={data.secondaryCta.href?.startsWith("http") ? "_blank" : undefined}
+                  rel={data.secondaryCta.href?.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
                   Follow on Facebook
                 </a>
