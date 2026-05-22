@@ -30,7 +30,7 @@ export function Navbar({ data }: NavbarProps) {
             <span style={{ color: "#6CC51D" }}>.</span>
           </div>
         </a>
-        <nav className="hidden items-center gap-6 text-sm md:flex">
+        <nav className="hidden items-center gap-6 text-sm md:flex md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2">
           {data.links.map((link) => (
             <a
               key={link.label}
@@ -42,13 +42,6 @@ export function Navbar({ data }: NavbarProps) {
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          {/* <a
-            className="hidden md:flex bg-brand-green px-5 py-2 text-sm font-medium text-white items-center gap-3 hover:bg-[#5aad16] transition-colors"
-            href={data.cta.href}
-          >
-            <Icon name="bag" />
-            {data.cta.label}
-          </a> */}
           <button
             className="flex md:hidden p-2 text-white hover:bg-white/10 rounded-md transition-colors"
             onClick={() => setIsOpen(!isOpen)}
