@@ -76,7 +76,9 @@ export function Features({ items }: FeaturesProps) {
             </p>
           </div>
           <a
-            href="#"
+            href="https://prohose.store/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full bg-[#6cc51d] px-7 py-3 text-center text-sm font-bold text-white hover:bg-[#5aad17] transition-colors sm:w-auto sm:shrink-0"
           >
             Start Shopping →

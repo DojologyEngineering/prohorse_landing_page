@@ -43,7 +43,9 @@ export function Hero({ data }: HeroProps) {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               className="inline-flex items-center gap-3 rounded-none bg-[#6CC51D] px-8 py-3.5 text-[15px] font-medium text-white hover:bg-[#5aad16] transition-colors"
-              href={data.primaryCta.href}
+                href={data.primaryCta.href}
+                target={data.primaryCta.href?.startsWith("http") ? "_blank" : undefined}
+                rel={data.primaryCta.href?.startsWith("http") ? "noopener noreferrer" : undefined}
             >
               <Icon name="bag" />
               {data.primaryCta.label}
@@ -51,7 +53,9 @@ export function Hero({ data }: HeroProps) {
             </a>
             <a
               className="inline-flex items-center justify-center gap-2 rounded-none border border-white/20 bg-transparent px-8 py-3.5 text-[15px] font-medium text-white/90 hover:bg-white/5 transition-colors"
-              href={data.secondaryCta.href}
+                href={data.secondaryCta.href}
+                target={data.secondaryCta.href?.startsWith("http") ? "_blank" : undefined}
+                rel={data.secondaryCta.href?.startsWith("http") ? "noopener noreferrer" : undefined}
             >
               {data.secondaryCta.label}
             </a>
