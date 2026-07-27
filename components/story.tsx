@@ -1,6 +1,6 @@
 import type { StoryContent } from "@/lib/types";
 import Image from "next/image";
-import storyImg from "@/app/asset/images/Container.webp";
+import storyImg from "@/app/asset/images/Container.png";
 
 type StoryProps = {
   data: StoryContent;
