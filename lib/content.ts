@@ -76,7 +76,7 @@ export const content: SiteContent = {
     members: [
       {
         name: "Lymeng PEN",
-        role: "Co-founder & IT Partner",
+        role: "Business & Tech Partner",
         bio: "Technology is our investment, we build digital infrastructure that empowers businesses and fuels economic growth.",
       },
       {
