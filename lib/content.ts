@@ -76,7 +76,7 @@ export const content: SiteContent = {
     members: [
       {
         name: "Lymeng PEN",
-        role: "Co-founder & IT Partner",
+        role: "Business & Tech Partner",
         bio: "Technology is our investment, we build digital infrastructure that empowers businesses and fuels economic growth.",
       },
       {
@@ -171,7 +171,7 @@ export const content: SiteContent = {
       { icon: "telegram", label: "Telegram", href: "https://t.me/prohoseofficialsafetyfood" },
     ],
     copyright: "© 2026 Prohose Official. All rights reserved.",
-    poweredBy: "Power by Dojology",
-    poweredByHref: "https://facebook.com/dojologytechandventures",
+    poweredBy: "Powered by Dojology Tech & Venture",
+    poweredByHref: "https://dojology.com/",
   },
 };

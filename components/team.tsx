@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { TeamContent } from "@/lib/types";
-import team1 from "@/app/asset/images/founder1.webp";
-import team2 from "@/app/asset/images/founder2.webp";
+import team1 from "@/app/asset/images/founder1.png";
+import team2 from "@/app/asset/images/founder2.png";
 import team3 from "@/app/asset/images/team3.webp";
 import team4 from "@/app/asset/images/manager1.webp";
 import team5 from "@/app/asset/images/manager2.webp";
