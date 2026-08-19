@@ -36,8 +36,15 @@ export function SiteLoadingOverlay() {
       aria-label="Loading website"
     >
       <div className="flex max-w-sm flex-col items-center gap-6">
-        <div className="rounded-full border border-white/10 bg-white/5 p-3 shadow-2xl shadow-black/20">
-          <Image src={logo} alt="Prohose Logo" width={56} height={56} priority />
+        <div className="flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white shadow-2xl shadow-black/20">
+          <Image
+            src={logo}
+            alt="Prohose Logo"
+            width={112}
+            height={112}
+            priority
+            className="h-full w-full scale-85 rounded-full object-contain"
+          />
         </div>
         <div className="flex flex-col items-center gap-4">
           <div className="h-12 w-12 rounded-full border-4 border-white/15 border-t-[#6CC51D] animate-spin" />

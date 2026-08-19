@@ -32,7 +32,6 @@ export const content: SiteContent = {
     description: "On [[Thursday, 19 March 2020]], when the government announced the lockdown, Phnom Penh stopped instantly. The main markets closed, our supply chain from smallholder farmers broke down, and our offline retail mart had no customers at all.\n\nThat night, my core team and I gathered in the office and made one decisive move: shift online overnight. Within hours, we created our first [[Facebook]] and [[Instagram channels]] and named it [[Prohose]].\n\nThis was the beginning of a new journey born from crisis, driven by resilience.",
     highlights: [
       { title: "2020", text: "Founded" },
-      { title: "2021", text: "Registered SME" },
       { title: "2022", text: "Medium Enterprise" },
     ],
   },
